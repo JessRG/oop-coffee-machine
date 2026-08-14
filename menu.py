@@ -22,8 +22,11 @@ class Menu:
     def get_items(self):
         """Returns all the names of the available menu items"""
         options = ""
-        for item in self.menu:
-            options += f"{item.name}/"
+        for index, item in enumerate(self.menu):
+            if index < len(self.menu) - 1:
+                options += f"{item.name}/"
+            else:
+                options += f"{item.name}"
         return options
 
     def find_drink(self, order_name):

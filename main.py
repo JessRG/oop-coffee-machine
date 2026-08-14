@@ -8,7 +8,7 @@ money_machine = MoneyMachine()
 
 is_on = True
 while is_on:
-    user_choice = input(f"What would you like? ({''.join(menu.get_items().rsplit('/', 1))}): ").lower()
+    user_choice = input(f"What would you like? ({menu.get_items()}): ").lower()
 
     if user_choice == "report":
         coffee_maker.report()
